@@ -1,5 +1,5 @@
 .header{
-    height: 12rem;
+    height: var(--header-height);
     background-image: linear-gradient(180deg, #f03b33, #fa653c);
 }
 
@@ -13,7 +13,7 @@
     justify-content:space-evenly;
     padding-left:0;
     list-style:none;
-    margin-top:4px;
+    margin:4px 0 0 0;
 }
 
 .header__navbar-item{
@@ -231,14 +231,14 @@
 
 /* Modal */
 .modal{
-    position:fixed;
+    /* position:fixed; */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     display:flex;
     animation: fadeIn linear 0.1s;
-    /* display:none; */
+    display:none;
 
 }
 
@@ -383,4 +383,41 @@
 
 .auth-form__help-forgot{
     color:var(--primary-color);
+}
+
+/* Header with search */
+.header-with-search{
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    width:200px;
+}
+
+.header__logo-img{
+    width: 150px;
+    color:var(--white-color);
+}
+
+.header__search{
+    flex:1;
+    height: 40px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+}
+
+.header__search:focus{
+    color:#888;
+}
+
+.header__cart{
+    text-align: center;
+    width: 150px;
+}
+
+.header__cart-icon{
+    font-size: 2.4rem;
+    color: var(--white-color);
 }
