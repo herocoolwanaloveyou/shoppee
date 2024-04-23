@@ -22,6 +22,87 @@
     min-height:26px;
 }
 
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.header__navbar-user-name{
+    margin-left:8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu{
+    display: none;
+    position: absolute;
+    padding-left: 0;
+    top:calc(100% + 4px);
+    right: 0;
+    border-radius: 2px;
+    width: 160px;
+    list-style: none;
+    background-color: var(--white-color);
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+}
+.header__navbar-user-menu::before{
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color:transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0px;
+    top:-28px;
+    z-index: -1;
+}
+.header__navbar-user-menu::after{
+    content: "";
+    width: 73%;
+    height: 10px;
+    right: 0;
+    background-color: transparent;
+    position: absolute;
+    top:-7%;
+}
+
+
+.header__navbar-user-item{
+
+}
+
+.header__navbar-user-item a{
+    display: block;
+    text-decoration: none;
+    color:var(--text-color);
+    font-size: 1.4rem;
+    padding:8px 16px;
+}
+
+.header__navbar-user-item:first-child{
+    border-top-left-radius:2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item:last-child{
+    border-bottom-left-radius:2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item:hover{
+    background-color: #fafafa;
+}
 .header__navbar-item, .header__navbar-item-link{
     display: inline-block;
     font-size:1.4rem;
@@ -31,7 +112,7 @@
 }
 
 .header__navbar-item, .header__navbar-item-link, .header__navbar-icon-link{
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 .header__navbar-item:hover, .header__navbar-icon-link:hover, .header__navbar-item-link:hover{
@@ -79,6 +160,7 @@
     padding:8px;
     border-radius: 2px;
     animation: fadeIn ease-in 0.3s;
+    z-index: 1;
 }
 
 .header__qr::before{
@@ -128,6 +210,7 @@
     transform-origin:calc(100%-20px) top;
     animation: headerNotifyGrowth ease-in 0.25s;
     will-change: opacity, transform;
+    z-index: 1;
 }
 
 .header__notify::before{
